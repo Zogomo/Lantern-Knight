@@ -1,5 +1,12 @@
-public class LanternKnight {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+public class LanternKnight
+{
+    public void main(String[] args) throws Exception 
+    {
+      DefinitelyNotSolaire Solaire = new DefinitelyNotSolaire();
+      Solaire.name = "Solaire";
+      System.out.println(Solaire.name);
+      Solaire.getDialogue();
+      System.out.println(Solaire.dialogue);
     }
 }
