@@ -3,6 +3,7 @@ package arenas;
 import entity.*;
 final class Arena
 {
+    private int ID = 0;
     Entity[] combatants;
     Entity combatantOne;
     Entity combatantTwo;
@@ -22,7 +23,7 @@ final class Arena
         System.out.println("Updating combatant positions");
     }
 
-    @Override
+
     public void draw() 
     {
         System.out.println("Drawing the arena.");

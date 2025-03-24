@@ -2,11 +2,14 @@ package entity;
 
 final class Merchant extends GroundNPC
 {
+    private int ID = 0;
+
     private String[] inventory;
 
     public Merchant()
     {
         super();
+        super.setDialogue("I'm a merchant.", "Buy my stuff.");
     }
 
     public Merchant(String newDialogue)
@@ -49,5 +52,17 @@ final class Merchant extends GroundNPC
     @Override
     public void draw() {
         System.out.println("Drawing a merchant");
+    }
+
+    @Override
+    public void setMovementType() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setMovementType'");
+    }
+
+    @Override
+    public void setMovementDistance() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setMovementDistance'");
     }
 }

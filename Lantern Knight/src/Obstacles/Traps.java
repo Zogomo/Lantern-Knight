@@ -1,5 +1,6 @@
 package Obstacles;
 
-public class Traps {
-
+public class Traps extends Environment 
+{
+    private int ID = 0;
 }

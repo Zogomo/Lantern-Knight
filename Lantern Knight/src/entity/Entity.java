@@ -1,6 +1,8 @@
 package entity;
 public abstract class Entity implements AttackInterface, DefendInterface, Drawable, Movement
 {
+    private int ID = 0;
+
     protected int health = 100;
     protected int attack = 10;
     protected int defense = 10;
@@ -85,6 +87,11 @@ public abstract class Entity implements AttackInterface, DefendInterface, Drawab
     public void setDialogue(String newDialogue)
     {
         dialogue = newDialogue;
+    }
+
+    public void setDialogue(String newDialogue, String catchPhrase) {
+
+        setDialogue(newDialogue + " " + catchPhrase);
     }
 
     public int getxPostition() 

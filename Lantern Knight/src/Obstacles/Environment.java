@@ -1,5 +1,6 @@
 package Obstacles;
 
-public class Environment {
-
+public class Environment 
+{
+    private int ID = 0;
 }

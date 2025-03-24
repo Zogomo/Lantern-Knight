@@ -1,6 +1,7 @@
 package entity;
 public abstract class PC extends Entity
 {
+    private int ID = 0;
 
     public PC()
     {

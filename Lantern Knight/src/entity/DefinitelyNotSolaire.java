@@ -1,14 +1,22 @@
 package entity;
 final class DefinitelyNotSolaire extends PC 
 {
+    private int ID = 666;
     public DefinitelyNotSolaire()
     {
-        super("I am definitely not Solaire. Praise the Sun!");
+        super();
+        setDialogue("I am definitely not Solaire.", "Praise the Sun!");
     }
 
     public DefinitelyNotSolaire(String newDialogue)
     {
         super(newDialogue);
+    }
+
+
+    public void setDialogue(String newDialogue, String catchPhrase) {
+
+        super.setDialogue(newDialogue + " " + catchPhrase);
     }
 
     @Override

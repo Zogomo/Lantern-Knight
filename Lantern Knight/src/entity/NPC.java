@@ -1,9 +1,8 @@
 package entity;
 
-import Attitudes;
-
 public abstract class NPC extends Entity
 {
+    private int ID = 0;
     Attitudes myAttitude = Attitudes.Neutral;
 
     public NPC()
