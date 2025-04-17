@@ -11,7 +11,8 @@ public class PC extends Entity
 {
     GamePanel gPanel;
     KeyHandler keyH;
-    int hasKey;
+    public int hasKey;
+    int idleCount;
 
     public final int screenX;
     public final int screenY;
@@ -170,6 +171,15 @@ public class PC extends Entity
                 spriteCounter = 0;
             }
         }
+        else {
+            idleCount++;
+            if (idleCount > 15)
+            {
+                spriteNum = 2;
+                idleCount = 0;
+            }
+            
+        }
     }
 
     
@@ -184,15 +194,27 @@ public class PC extends Entity
                 case "Key":
                     gPanel.obj[i] = null;
                     hasKey++;
-                    System.out.println("Keys: " + hasKey);
+                    //System.out.println("Keys: " + hasKey);
+                    
+                    gPanel.ui.notification("You have picked up a key!");
+        
                     break;     
                 case "Chest":
+
+                    String message = "The chest can't be opened without a key.";
                     if(gPanel.obj[i].opened == false && hasKey > 0)
                     {
                         gPanel.obj[i].image = gPanel.obj[i].imageAlt;
                         gPanel.obj[i].opened = true;
                         hasKey--;
-                        System.out.println("Keys: " + hasKey);
+                        //System.out.println("Keys: " + hasKey);
+                        message = "The chest is open.";
+                        gPanel.ui.notification("The chest has been opened!");
+                        
+                    }
+                    else
+                    {
+                        gPanel.ui.notification(message);                       
                     }
                     break;
             }

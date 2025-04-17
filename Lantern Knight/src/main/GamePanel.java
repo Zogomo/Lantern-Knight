@@ -35,6 +35,7 @@ public class GamePanel extends JPanel implements Runnable
     
     public CollisionDetection cDet = new CollisionDetection(this);
     public ObjectSetter oSetter = new ObjectSetter(this);
+    public UI ui = new UI(this);
     public PC pc = new PC(this, keyH);
     public SuperObject obj[] = new SuperObject[10]; // Allows for 20 objects to be displayed at a time.
     
@@ -106,6 +107,9 @@ public class GamePanel extends JPanel implements Runnable
         }
         
         pc.draw(g2);
+
+        ui.draw(g2);
+
         g2.dispose();
     }
 }

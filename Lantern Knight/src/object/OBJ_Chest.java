@@ -22,7 +22,7 @@ public class OBJ_Chest extends SuperObject
 
         try
         {
-            image = ImageIO.read(getClass().getResourceAsStream("Furniture.png"));
+            image = ImageIO.read(getClass().getResourceAsStream("/res/objects/Furniture.png"));
             imageAlt = image.getSubimage(736, 160, 16, 32);
             image = image.getSubimage(752, 160, 16, 32);
         }    
